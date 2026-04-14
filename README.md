@@ -4,7 +4,9 @@ A lightweight debugging tool to **detect and repair corrupted `.docx`
 files** caused by Formstack WebMerge.
 This can only help to fix the corrupted file but unable to hijack the "Merge" or "Delivery" process, thus no way to fix the file before generating the doc or sending for signing.
 
-According to our testing, it only injects the corrupted code in "[Content_Types].xml"
+According to our testing, webmerge only injects the corrupted code in "[Content_Types].xml" randomly, we believe this might due to server side issue and some merge workers (routes) are broken. 
+
+Same user, same doc, a few mins different can give you different result, the doc may be broken, then a few mins later, the new generated doc will be fine.
 
 ## 🚨 What problem does this solve?
 
